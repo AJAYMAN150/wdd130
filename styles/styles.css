@@ -30,10 +30,10 @@ main {
 }
 aside {
     width: 20rem;
-    text-align: right;
+    text-align: center;
 }
 aside h2 {
-    position:absolute;
+    position:relative;
     top: 47px;
     left: 150px;
 }
@@ -51,6 +51,7 @@ footer {
     border-top: 1px solid #000;
     text-align: center;
 }
+/* Class Selector */
 
 .box {
     margin: 1rem;
