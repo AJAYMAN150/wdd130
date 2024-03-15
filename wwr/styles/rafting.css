@@ -1,0 +1,35 @@
+@import url(https://fonts.google.com/specimen/Madimi+One);
+
+:root {
+    --primary-color: #E4E8E8;
+    --secondary-color: #A9B3CE;
+    --accent1-color: #E7B1D1;
+    --accent2-color: #474954;
+
+    --heading-font: 'Madimi One' serif; font-variant: var(--accent2-color);
+    --body-font: 'Madimi One' serif; font-variant: var(--accent1-color);
+
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.herodiv {
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+}
+
+article {
+    position: absolute;
+    background-color: aliceblue;
+}
+
+.hero img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
