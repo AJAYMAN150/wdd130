@@ -1,4 +1,4 @@
-@import url(https://fonts.google.com/specimen/Madimi+One);
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
 :root {
     --primary-color: #E4E8E8;
@@ -6,30 +6,87 @@
     --accent1-color: #E7B1D1;
     --accent2-color: #474954;
 
-    --heading-font: 'Madimi One' serif; font-variant: var(--accent2-color);
-    --body-font: 'Madimi One' serif; font-variant: var(--accent1-color);
+    --heading-font: 'Madimi One', serif;
+    --body-font: 'Madimi One', serif;
+}
 
+/* General Styles */
+body {
+    font-family: var(--body-font);
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
 }
 
 a:link {
     text-decoration: none;
+    color: var(--accent2-color);
 }
 
-.herodiv {
+a:hover {
+    color: var(--accent1-color);
+}
+
+/* Hero Section */
+.hero {
     position: relative;
+    text-align: center;
+    color: var(--accent2-color);
 }
 
-h1 {
-    position: absolute;
-}
-
-article {
-    position: absolute;
-    background-color: aliceblue;
-}
-
-.hero img{
+.hero img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+/* Article inside Hero */
+.hero article {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color);
+    padding: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Layout Enhancements */
+.herodiv {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+    text-align: center;
 }
