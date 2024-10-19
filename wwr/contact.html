@@ -4,53 +4,62 @@
         <title>Intrepid Waters | Contact Us</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Alfred J. Vaka, WDD 130, Contact Page">
+        <meta name="description" content="Contact Intrepid Waters for inquiries and reservations.">
         <meta name="author" content="Alfred J. Vaka">
-        <link href="styles/rafting.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles/rafting.css">
     </head>
     <body>
         <header>
-            <nav>
-                <img src="images/logo.png" alt="Intrepid Waters Logo">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="trips.html">Trips</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
+            <div class="header-content">
+                <img src="images/logo.png" alt="Intrepid Waters Logo" class="logo">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="trips.html">Trips</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
         </header>
+
         <main>
             <h1>Contact Us</h1>
 
-            <p>Address: 1725 Violet Street</p>
-            <p>Phone Number: 999-999-999</p>
-            <p>Email: alfredojones@aol.com</p>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4403.126978648585!2d-157.86085132406868!3d21.348695480381828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006e9e3501a1d5%3A0x834294e10eb95118!2s1725%20Violet%20St%2C%20Honolulu%2C%20HI%2096819!5e1!3m2!1sen!2sus!4v1729324679811!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <!-- Company Information Section -->
+            <section class="company-info">
+                <p><strong>Address:</strong> 1725 Violet Street, Honolulu, HI 96819</p>
+                <p><strong>Phone Number:</strong> (999) 999-9999</p>
+                <p><strong>Email:</strong> alfredojones@aol.com</p>
+            </section>
 
-            <!-- Employee Profiles Section -->
-            <section>
-                <h2>Meet Our Team</h2>
+            <!-- Google Map Section -->
+            <section class="map">
+                <h2>Find Us Here:</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4403.126978648585!2d-157.86085132406868!3d21.348695480381828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006e9e3501a1d5%3A0x834294e10eb95118!2s1725%20Violet%20St%2C%20Honolulu%2C%20HI%2096819!5e1!3m2!1sen!2sus!4v1729324679811!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <!-- Employee Section -->
+            <section class="employees">
+                <h2>Our Team</h2>
                 <div class="employee-profiles">
-                    <div class="employee">
+                    <figure>
                         <img src="images/employee1.jpg" alt="Employee 1">
-                        <p>Employee 1: Title</p>
-                    </div>
-                    <div class="employee">
+                        <figcaption>John Doe - Manager</figcaption>
+                    </figure>
+                    <figure>
                         <img src="images/employee2.jpg" alt="Employee 2">
-                        <p>Employee 2: Title</p>
-                    </div>
-                    <div class="employee">
+                        <figcaption>Jane Smith - Tour Guide</figcaption>
+                    </figure>
+                    <figure>
                         <img src="images/employee3.jpg" alt="Employee 3">
-                        <p>Employee 3: Title</p>
-                    </div>
+                        <figcaption>Mark Johnson - Reservation Specialist</figcaption>
+                    </figure>
                 </div>
             </section>
 
-            <!-- Contact Form -->
-            <section>
+            <!-- Contact Form Section -->
+            <section class="contact-form">
                 <h2>Get in Touch</h2>
-                <form action="#" method="post">
+                <form>
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -59,20 +68,29 @@
 
                     <fieldset>
                         <legend>Purpose of Message:</legend>
-                        <label><input type="radio" name="purpose" value="General Inquiry"> General Inquiry</label>
-                        <label><input type="radio" name="purpose" value="Reservation Question"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" value="Website Suggestion"> Website Suggestion</label>
+                        <label>
+                            <input type="radio" name="purpose" value="general" required> General Inquiry
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="reservation" required> Reservation Question
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="suggestion" required> Website Suggestion
+                        </label>
                     </fieldset>
 
                     <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <textarea id="message" name="message" required></textarea>
 
-                    <label><input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter</label>
+                    <label>
+                        <input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter
+                    </label>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit">Send Message</button>
                 </form>
             </section>
         </main>
+
         <footer>
             <p>©️2024 Intrepid Waters | Alfred J. Vaka</p>
             <nav class="sociallinks">
@@ -86,6 +104,7 @@
                     <img src="images/Insta.png" alt="Instagram">
                 </a>
             </nav>
+            <p><a href="https://app.moqups.com/jmOZyL9ss98NFmAGEpb6Q8WtsXDgjE9M/edit/page/a60fa9403" target="_blank">View Wireframe</a></p>
         </footer>
     </body>
 </html>
