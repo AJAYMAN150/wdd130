@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 nav {
     background-color: steelblue;
     padding: 1rem;
@@ -10,6 +11,7 @@ nav {
     justify-content: space-evenly;
     align-items: center;
 }
+
 nav a {
     display: block;
     padding: 0.5rem;
@@ -18,10 +20,13 @@ nav a {
     font-weight: 700;
     color: #fff;
 }
+
 h1 {
     color: steelblue;
-    border-bottom: burlywood;
+    border-bottom: 2px solid burlywood; /* Adjusted for better visibility */
+    padding-bottom: 10px; /* Added padding for spacing */
 }
+
 img {
     width: 150px;
     height: auto;
@@ -29,57 +34,69 @@ img {
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
+
 p {
     padding: 0;
 }
 
 main {
     max-width: 840px;
+    margin: 1rem auto; /* Centering main content */
 }
+
 aside {
     position: relative;
     width: 20rem;
     text-align: center;
 }
+
 aside h2 {
-    position:absolute;
+    position: absolute;
     top: 47px;
     left: 150px;
 }
+
 aside img {
     width: 200px;
     height: auto;
 }
+
 main img {
     width: 150px;
     height: auto;
     float: right;
 }
+
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
 }
+
 /* Class Selector */
 .box {
     margin: 1rem;
-    border: 1px solid rgba(0,0,0,.1);
+    border: 1px solid rgba(0, 0, 0, .1);
     padding: 1rem;
     background-color: #ddd;
     color: #000;
 }
+
 header, .grid, footer {
     max-width: 840px;
     margin: 0 auto;
 }
+
 .grid {
     display: grid;
     align-items: center;
 }
+
 main {
     grid-column: 2/3;
     margin: 1rem;
 }
+
 aside {
     width: 20rem;
     position: relative;
