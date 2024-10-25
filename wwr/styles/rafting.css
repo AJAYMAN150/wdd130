@@ -33,9 +33,9 @@ header {
     padding: 1rem 0;
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Adjust as needed for layout */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -43,6 +43,13 @@ header {
 
 header img.logo {
     width: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
 }
 
 header nav a {
@@ -95,15 +102,8 @@ header nav a:hover {
     color: var(--accent2-color);
 }
 
-.hero-side-img {
-    float: right;
-    width: 150px;
-    margin-left: 1rem;
-    border-radius: 8px;
-}
-
 /* History Section */
-.history {
+#history {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
@@ -126,8 +126,8 @@ header nav a:hover {
     border-radius: 8px;
 }
 
-/* Adventure Section */
-.adventures {
+/* Adventures Section */
+#adventures {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
@@ -135,30 +135,32 @@ header nav a:hover {
     border-radius: 8px;
 }
 
-.adventures h2 {
+#adventures h2 {
     text-align: center;
     margin-bottom: 2rem;
     font-family: var(--heading-font);
     color: var(--accent1-color);
 }
 
-.adventure-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
+.adventure-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.adventure-grid figure {
+.adventure-gallery figure {
     text-align: center;
+    flex-basis: 30%; /* Adjust to fit your design */
+    margin: 1rem; /* Add margin for spacing */
 }
 
-.adventure-grid img {
+.adventure-gallery img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.adventure-grid figcaption {
+.adventure-gallery figcaption {
     margin-top: 0.5rem;
     font-size: 0.9rem;
     color: var(--accent2-color);
