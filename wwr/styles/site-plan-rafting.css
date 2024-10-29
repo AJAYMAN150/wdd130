@@ -1,11 +1,5 @@
-@import url(https://fonts.google.com/specimen/Open+Sans);
-@import url(https://fonts.google.com/specimen/Madimi+One);
-
-body {
-    font-family: var(--paragraph font);
-    max-width: 960px;
-    padding: 20px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
 :root {
     --primary-color: #E4E8E8;
@@ -13,17 +7,17 @@ body {
     --accent1-color: #E7B1D1;
     --accent2-color: #474954;
 
-    --heading-font: 'Madimi One' serif;
-    --body-font: 'Open Sans' serif;
+    --heading-font: 'Madimi One', serif;
+    --body-font: 'Open Sans', sans-serif;
 
-    --nav-background-color:#E4E8E8;
-    --nav-link-color:#A9B3CE;
-    --nav-hover-link-color:#E7B1D1;
-    --nac-hoverbackground-color:#474954;
+    --nav-background-color: #E4E8E8;
+    --nav-link-color: #A9B3CE;
+    --nav-hover-link-color: #E7B1D1;
+    --nav-hover-background-color: #474954;
 }
 
 body {
-    font-family: var(--paragraph-font);
+    font-family: var(--body-font);
     max-width: 960px;
     padding: 20px;
 }
@@ -43,22 +37,24 @@ p {
 }
 
 nav {
-    background-color: var(--nac-hoverbackground-color);
+    background-color: var(--nav-background-color);
     font-size: 1.2rem;
     display: flex;
 }
 
 nav a {
     display: block;
-    color: var(--nav-hover-link-color);
+    color: var(--nav-link-color);
     text-decoration: none;
     padding: 1rem;
 }
 
-nav a:link, nav a:visited {
-    color: var(--nav-hover-link-color);
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
 }
+
 nav a:hover {
     color: var(--nav-hover-link-color);
-    background-color: var(--nac-hoverbackground-color);
+    background-color: var(--nav-hover-background-color);
 }
