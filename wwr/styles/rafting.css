@@ -1,60 +1,54 @@
-/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Madimi+One&display=swap');
 
-/* Root Variables for Color and Font */
 :root {
-    --primary-color: #E4E8E8;
-    --secondary-color: #A9B3CE;
-    --accent1-color: #E7B1D1;
-    --accent2-color: #474954;
+    --primary-bg-color: #E4E8E8;
+    --secondary-bg-color: #A9B3CE;
+    --accent-color: #E7B1D1;
+    --text-color: #474954;
+    --hero-text-color: white;
     
     --heading-font: 'Madimi One', serif;
     --body-font: 'Open Sans', sans-serif;
-
-    --nav-background-color: #E4E8E8;
-    --nav-link-color: #A9B3CE;
-    --nav-hover-link-color: #E7B1D1;
-    --nav-hover-background-color: #474954;
 }
 
-/* Global Styles */
 body {
     font-family: var(--body-font);
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
 }
 
-/* Header and Navigation */
 header {
-    background-color: var(--accent1-color);
+    background-color: var(--accent-color);
     padding: 20px;
+    text-align: center;
 }
 
 nav {
     display: flex;
     justify-content: space-around;
-    background-color: var(--nav-background-color);
-    font-size: 1.2rem;
+    background-color: var(--secondary-bg-color);
+    padding: 10px 0;
 }
 
 nav a {
-    color: var(--nav-link-color);
+    color: var(--text-color);
     text-decoration: none;
     padding: 1rem;
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
+    background-color: var(--accent-color);
+    color: var(--hero-text-color);
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 .hero img {
@@ -66,16 +60,17 @@ nav a:hover {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    color: white;
+    color: var(--hero-text-color);
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
+    font-size: 2.5rem;
 }
 
-/* Newsletter Section */
 .newsletter {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-bg-color);
     padding: 20px;
     border-radius: 8px;
+    margin: 20px 0;
 }
 
 .newsletter form {
@@ -83,37 +78,49 @@ nav a:hover {
     flex-direction: column;
 }
 
+.newsletter label {
+    margin-bottom: 5px;
+}
+
 .newsletter input {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid var(--accent2-color);
+    border: 1px solid var(--text-color);
     border-radius: 5px;
 }
 
 .newsletter button {
-    background-color: var(--accent1-color);
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--hero-text-color);
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Call to Action Section */
+.newsletter button:hover {
+    background-color: var(--text-color);
+}
+
 .cta {
     text-align: center;
     margin: 20px 0;
 }
 
 .cta .button {
-    background-color: var(--accent2-color);
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--hero-text-color);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-/* Grid Layout for Additional Images and Content */
+.cta .button:hover {
+    background-color: var(--text-color);
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -121,9 +128,10 @@ nav a:hover {
 }
 
 .grid-item {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-bg-color);
     padding: 15px;
     border-radius: 8px;
+    text-align: center;
 }
 
 .grid-item img {
@@ -132,14 +140,13 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: var(--accent1-color);
+    background-color: var(--accent-color);
+    color: var(--hero-text-color);
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 600px) {
     nav {
         flex-direction: column;
